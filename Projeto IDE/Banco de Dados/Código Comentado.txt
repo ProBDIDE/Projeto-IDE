@@ -1,0 +1,19 @@
+-- Cria um novo banco de dados chamado Project_IDE
+CREATE DATABASE Project_IDE;
+
+-- Define o banco de dados que será usado nas próximas instruções SQL
+USE Project_IDE;
+
+-- Cria uma nova tabela chamada 'usuarios' no banco de dados atual
+CREATE TABLE usuarios (
+    -- Define uma coluna 'id' que é um número inteiro que incrementa automaticamente e é a chave primária
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    -- Define uma coluna 'username' que é uma string de até 50 caracteres e não pode ser NULL
+    username VARCHAR(50) NOT NULL,
+    -- Define uma coluna 'password' que é uma string de até 255 caracteres e não pode ser NULL
+    password VARCHAR(255) NOT NULL,
+    -- Define uma coluna 'email' que é uma string de até 255 caracteres
+    email VARCHAR(255),
+    -- Garante que o 'username' seja único na tabela
+    UNIQUE(username)
+);
